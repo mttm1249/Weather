@@ -53,20 +53,18 @@ class WeatherViewController: UIViewController {
         locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters
     }
     
+    private func formatTemperature(_ temperature: Double) -> String {
+        return (temperature > 0 ? "+" : "") + "\(temperature)°"
+    }
+
     private func setupTodayWeatherInfo(from data: WeatherData) {
-        cityNameLabel.text = "\(data.geoObject.locality.name)"
+        cityNameLabel.text = data.geoObject.locality.name
+        
         let feelsLikeText = "Ощущается как:"
-        if data.fact.temp > 0 {
-            currentTempInfoLabel.text = "+\(data.fact.temp)°"
-        } else {
-            currentTempInfoLabel.text = "-\(data.fact.temp)°"
-        }
-        if data.fact.feelsLike > 0 {
-            feelsLikeInfoLabel.text = "\(feelsLikeText) +\(data.fact.feelsLike)°"
-        } else {
-            feelsLikeInfoLabel.text = "\(feelsLikeText) -\(data.fact.feelsLike)°"
-        }
-        guard let icon = conditions.first else {return}
+        currentTempInfoLabel.text = formatTemperature(data.fact.temp)
+        feelsLikeInfoLabel.text = "\(feelsLikeText) \(formatTemperature(data.fact.feelsLike))"
+        
+        guard let icon = conditions.first else { return }
         conditionImage.image = IconManager.getIcon(icon)
     }
     
@@ -74,7 +72,6 @@ class WeatherViewController: UIViewController {
         WeatherNetworkService.shared.fetchWeatherData(latitude: String(coordinate.latitude), longitude: String(coordinate.longitude)) { result in
             switch result {
             case .success(let weatherData):
-                print(weatherData)
                 self.forecasts = weatherData.forecasts
                 self.conditions = self.forecasts.map { $0.parts.day.condition }
                 DispatchQueue.main.async {
