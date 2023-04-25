@@ -9,7 +9,6 @@
 project.xcworkspace/
 xcuserdata/
 *.xccheckout
-*.xcodeproj/*
 
 # Build generated files
 build/
