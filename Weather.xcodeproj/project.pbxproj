@@ -434,7 +434,7 @@
 				DEVELOPMENT_TEAM = 7GM9RUFL9F;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Weather/Supporting files/Info.plist";
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app needs access to your location in order to show weather data for your current location.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Приложению требуется доступ к вашему местоположению, чтобы отображать данные о погоде для вашего текущего местоположения.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = WeatherScreen;
@@ -468,7 +468,7 @@
 				DEVELOPMENT_TEAM = 7GM9RUFL9F;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Weather/Supporting files/Info.plist";
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app needs access to your location in order to show weather data for your current location.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Приложению требуется доступ к вашему местоположению, чтобы отображать данные о погоде для вашего текущего местоположения.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = WeatherScreen;
