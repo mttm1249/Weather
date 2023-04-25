@@ -1,0 +1,37 @@
+# .gitignore for iOS projects
+
+# Ignore .DS_Store files
+.DS_Store
+**/.DS_Store
+
+# Xcode
+*.xcuserstate
+project.xcworkspace/
+xcuserdata/
+*.xccheckout
+*.xcodeproj/*
+
+# Build generated files
+build/
+DerivedData/
+
+# Carthage
+Carthage/Build
+
+# CocoaPods
+Pods/
+Podfile.lock
+
+# Swift Package Manager
+.swift-version
+Packages/
+.package.resolved
+
+# Ignore .ipa files
+*.ipa
+
+# Ignore .plist files
+*.plist
+
+# Ignore personal .gitconfig files
+.gitconfig
