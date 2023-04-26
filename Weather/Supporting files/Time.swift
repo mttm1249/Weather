@@ -8,7 +8,7 @@
 import Foundation
 
 class Time {
-    static func formatDateString(inputDateString: String) -> String? {
+    static func formatDateString(_ inputDateString: String) -> String? {
         let dateFormatter = DateFormatter()
         
         dateFormatter.dateFormat = "yyyy-MM-dd"
@@ -20,6 +20,23 @@ class Time {
         }
         
         dateFormatter.dateFormat = "d MMMM"
+        let formattedDateString = dateFormatter.string(from: date)
+        
+        return formattedDateString
+    }
+    
+    static func formatDateString(_ inputDateString: String, outputStringFormat: String) -> String? {
+        let dateFormatter = DateFormatter()
+        
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        dateFormatter.locale = Locale(identifier: "ru_RU")
+
+        guard let date = dateFormatter.date(from: inputDateString) else {
+            print("Error: Invalid input date format.")
+            return nil
+        }
+        
+        dateFormatter.dateFormat = outputStringFormat
         let formattedDateString = dateFormatter.string(from: date)
         
         return formattedDateString
