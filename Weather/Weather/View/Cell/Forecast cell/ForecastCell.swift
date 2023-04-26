@@ -22,11 +22,11 @@ class ForecastCell: UITableViewCell {
         forecastDayLabel.text = Time.formatDateString(model.date, outputStringFormat: "EEEE")
 
         if let tempAvg = model.parts.day.tempAvg {
-            let sign = tempAvg > 0 ? "+" : ""
+            let sign = tempAvg > 0 ? "+" : "-"
             dayTempLabel.text = "\(sign)\(tempAvg)°"
         }
         if let tempAvg = model.parts.night.tempAvg {
-            let sign = tempAvg > 0 ? "+" : ""
+            let sign = tempAvg > 0 ? "+" : "-"
             nightTempLabel.text = "\(sign)\(tempAvg)°"
         }
     }
