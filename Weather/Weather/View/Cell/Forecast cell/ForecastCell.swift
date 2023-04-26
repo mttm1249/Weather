@@ -18,7 +18,7 @@ class ForecastCell: UITableViewCell {
     @IBOutlet weak var iconImage: UIImageView!
 
     func configure(_ model: Forecast) {
-        forecastDateLabel.text = Time.formatDateString(model.date)
+        forecastDateLabel.text = Time.formatDateString(model.date, outputStringFormat: "d MMMM")
         forecastDayLabel.text = Time.formatDateString(model.date, outputStringFormat: "EEEE")
 
         if let tempAvg = model.parts.day.tempAvg {
