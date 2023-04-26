@@ -63,7 +63,7 @@ class WeatherViewController: UIViewController {
     }
     
     private func formatTemperature(_ temperature: Double) -> String {
-        return (temperature > 0 ? "+" : "") + "\(temperature)°"
+        return (temperature > 0 ? "+" : "-") + "\(temperature)°"
     }
     
     private func setupTodayWeatherInfo(from data: WeatherData) {
