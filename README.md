@@ -1,4 +1,4 @@
 # Weather
 Прогноз погоды на неделю
 
-<img src="https://user-images.githubusercontent.com/87662841/234329802-55bdea8b-12b9-404a-a3db-0530ba0f6039.png" width="230" height="500">  
+<img src="https://user-images.githubusercontent.com/87662841/234495449-47dac299-2b7a-46d9-99d7-8f28a9d3dea3.png" width="230" height="500">  
